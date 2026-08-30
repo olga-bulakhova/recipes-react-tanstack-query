@@ -1,5 +1,5 @@
 import { useRecipes } from '@/features/recipes'
-import { Typography } from '@/shared/components'
+import { Skeleton, Typography } from '@/shared/components'
 import { ContentList } from '../common/ContentList'
 import { RecipeCard } from '@/entities/recipe'
 
@@ -8,7 +8,7 @@ const MainPage = () => {
 
 	const { data: recipesResponse, isLoading: isREcipesLoading } = useRecipes({ limit })
 
-	if (isREcipesLoading) return <div>...isLoading</div>
+	const RECIPE_SKELETON = <Skeleton height={350} />
 
 	return (
 		<div className='wrapper'>
@@ -25,7 +25,7 @@ const MainPage = () => {
 					return <RecipeCard recipe={recipe} />
 				}}
 				isLoading={isREcipesLoading}
-				skeleton={<div>---</div>}
+				skeleton={RECIPE_SKELETON}
 				rowKey={recipe => recipe.id}
 			/>
 		</div>

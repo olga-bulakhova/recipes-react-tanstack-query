@@ -14,10 +14,12 @@ export const RecipeCard: React.FC<RecipeCardProps> = props => {
 
 	return (
 		<div className={s.recipeCard}>
-			<img
-				src={recipe.image}
-				alt={recipe.name}
-			/>
+			<div className={s.recipeCardImage}>
+				<img
+					src={recipe.image}
+					alt={recipe.name}
+				/>
+			</div>
 
 			<div className={s.recipeCardDetails}>
 				<div>
