@@ -1,0 +1,49 @@
+:root {
+	/*
+  * Colors
+  */
+	--color-accent: #3960fc;
+	--color-disabled: #858585;
+	--color-outline-focus: #1a75f5;
+
+	/* Text */
+	--color-text-primary: #292929;
+
+	--color-text-secondary: #656565;
+	--color-text-primary-reverse: #fff;
+	--color-text-label: #808080;
+	--color-text-error: #f51a51;
+
+	/* Backgrounds */
+	--color-bg-primary: #fff;
+
+	--color-bg-input-hover: #262626;
+	--color-bg-card: rgb(7 7 7 / 50%);
+	--color-bg-interactive-secondary: #333;
+
+	/* Borders */
+	--color-border-base: #f0f0f0;
+	--color-border-input-primary: #4d4d4d;
+	--color-border-input-active: #fffefe;
+
+	/*
+  * Typography
+  */
+
+	/* font-sizes */
+	--font-size-xxxs: 12px;
+	--font-size-xxs: 13px;
+	--font-size-xs: 14px;
+	--font-size-s: 16px;
+	--font-size-m: 18px;
+	--font-size-l: 20px;
+	--font-size-xl: 24px;
+	--font-size-xxl: 30px;
+	--font-size-xxxl: 34px;
+
+	/*
+  * Layout
+  */
+	--header-height: 80px;
+	--player-height: 112px;
+}

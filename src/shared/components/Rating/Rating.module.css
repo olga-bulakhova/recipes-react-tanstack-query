@@ -1,0 +1,12 @@
+.rating {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 9px;
+	line-height: 1;
+}
+
+.ratingStars svg {
+	width: 14px;
+	height: 14px;
+}
