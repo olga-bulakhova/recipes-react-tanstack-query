@@ -17,13 +17,13 @@
 	/* Backgrounds */
 	--color-bg-primary: #fff;
 
-	--color-bg-input-hover: #262626;
-	--color-bg-card: rgb(7 7 7 / 50%);
+	--color-bg-input-hover: #dfe9ff;
+	--color-bg-card: rgba(198, 195, 195, 0.5);
 	--color-bg-interactive-secondary: #333;
 
 	/* Borders */
 	--color-border-base: #f0f0f0;
-	--color-border-input-primary: #4d4d4d;
+	--color-border-input-primary: #f4e8e8;
 	--color-border-input-active: #fffefe;
 
 	/*

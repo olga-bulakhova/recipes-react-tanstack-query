@@ -12,7 +12,7 @@ export const MealTypesList = ({ mealTypes }: MealTypesListProps) => {
 			className={s.mealType}
 		>
 			{mealTypes.map(meal => (
-				<span>{meal}</span>
+				<span key={meal}>{meal}</span>
 			))}
 		</Typography>
 	)

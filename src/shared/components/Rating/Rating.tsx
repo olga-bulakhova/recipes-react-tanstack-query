@@ -18,8 +18,8 @@ export const Rating = ({ value, max = 5, className = '' }: RatingProps) => {
 			variant='body3'
 			className={style.rating}
 		>
-			<div>{value}</div>
-			<div
+			<span>{value}</span>
+			<span
 				className={`${[style['ratingStars']]} ${className}`}
 				aria-label={`Рейтинг: ${value} из ${max}`}
 			>
@@ -56,7 +56,7 @@ export const Rating = ({ value, max = 5, className = '' }: RatingProps) => {
 						</svg>
 					)
 				})}
-			</div>
+			</span>
 		</Typography>
 	)
 }

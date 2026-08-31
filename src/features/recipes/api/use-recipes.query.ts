@@ -3,14 +3,11 @@ import { recipesKeys } from './query-key-factory'
 import { recipesService } from './recipes.service'
 import type { IRecipeFilters } from '../types'
 
-export const useRecipes = (params: IRecipeFilters = { limit: 30 } as IRecipeFilters) => {
+export const useRecipesQuery = (params: IRecipeFilters = { limit: 30 } as IRecipeFilters) => {
 	return useQuery({
 		queryKey: recipesKeys.filteredList(params),
-
-		queryFn: ({ signal }) => recipesService.findAll(params, signal),
-
+		queryFn: ({ signal }) => recipesService.findListWithParams(params, signal),
 		placeholderData: keepPreviousData,
-
 		retry: (failureCount, error) => {
 			if ('status' in error && (error.status === 401 || error.status === 404)) {
 				return false

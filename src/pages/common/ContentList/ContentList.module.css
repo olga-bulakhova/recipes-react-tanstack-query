@@ -6,7 +6,19 @@
 	display: grid;
 	gap: var(--list-gap, 12px);
 	padding-block: 30px 8px;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-columns: repeat(var(--list-column-count, 1), minmax(250px, 1fr));
+
+	@media (min-width: 640px) {
+		--list-column-count: 2;
+	}
+
+	@media (min-width: 900px) {
+		--list-column-count: 3;
+	}
+
+	@media (min-width: 1024px) {
+		--list-column-count: 4;
+	}
 }
 
 .listRow {
@@ -16,7 +28,6 @@
 	padding: 40px 0;
 }
 
-.listRow li {
+.list li {
 	width: 100%;
 }
-

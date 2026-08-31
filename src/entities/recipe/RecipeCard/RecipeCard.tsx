@@ -27,14 +27,14 @@ export const RecipeCard: React.FC<RecipeCardProps> = props => {
 						variant='body3'
 						className={s.recipeCardInfo}
 					>
-						<div className={s.recipeCardWithIcon}>
+						<span className={s.recipeCardWithIcon}>
 							<CaloriesIcon />
 							<span>{recipe.caloriesPerServing} kcal</span>
-						</div>
-						<div className={s.recipeCardWithIcon}>
+						</span>
+						<span className={s.recipeCardWithIcon}>
 							<ClockIcon />
 							<span>{recipe.cookTimeMinutes} min</span>
-						</div>
+						</span>
 					</Typography>
 					<Typography variant='h3'>{recipe.name}</Typography>
 				</div>
