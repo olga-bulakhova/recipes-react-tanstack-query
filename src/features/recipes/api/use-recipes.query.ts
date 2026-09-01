@@ -6,7 +6,7 @@ import type { IRecipeFilters } from '../types'
 export const useRecipesQuery = (params: IRecipeFilters = { limit: 30 } as IRecipeFilters) => {
 	return useQuery({
 		queryKey: recipesKeys.filteredList(params),
-		queryFn: ({ signal }) => recipesService.findListWithParams(params, signal),
+		queryFn: () => recipesService.getListWithParams(params),
 		placeholderData: keepPreviousData,
 		retry: (failureCount, error) => {
 			if ('status' in error && (error.status === 401 || error.status === 404)) {

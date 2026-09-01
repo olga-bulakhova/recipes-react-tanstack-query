@@ -1,4 +1,6 @@
 export * from './ClockIcon'
 export * from './KeyboardArrowLeftIcon'
 export * from './KeyboardArrowRightIcon'
-export * from './CaloriesIcon.tsx'
+export * from './CaloriesIcon'
+export * from './DifficultyIcon'
+export * from './CuisineIcon'

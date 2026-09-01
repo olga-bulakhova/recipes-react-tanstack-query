@@ -16,8 +16,8 @@ export const Pagination: React.FC<PaginationProps> = ({
 	totalPages,
 	pageNumbers,
 	onPageChange,
-
 	className,
+
 	...props
 }) => {
 	if (totalPages <= 1) {

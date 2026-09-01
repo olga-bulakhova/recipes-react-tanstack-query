@@ -1,3 +1,4 @@
+export * from './IconLabel'
 export * from './Spinner'
 export * from './Skeleton'
 export * from './Typography'

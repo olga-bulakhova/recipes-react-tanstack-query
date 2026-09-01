@@ -49,6 +49,10 @@ export const usePageSearchParams = (limit: number) => {
 	const handlePageChange = useCallback(
 		(page: number) => {
 			updateSearchParams({ page: page <= 1 ? undefined : page })
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			})
 		},
 		[updateSearchParams],
 	)
