@@ -1,8 +1,9 @@
 import React from 'react'
 import { IconLabel, Rating, Typography } from '@/shared/components'
-import { MealTypesList } from '@/entities/recipe/MealTypesList/MealTypesList'
-import s from '../RecipePage.module.css' // Импортируем стили
+
+import s from '../RecipePage.module.css' 
 import { CaloriesIcon, ClockIcon, CuisineIcon, DifficultyIcon } from '@/shared/icons'
+import { CategoriesList } from '@/entities/recipe'
 
 interface RecipeInfoCardProps {
 	image: string
@@ -15,6 +16,7 @@ interface RecipeInfoCardProps {
 	cookTimeMinutes: number
 	ingredients: string[]
 	caloriesPerServing: number
+	tags: string[]
 }
 
 export const RecipeInfoCard: React.FC<RecipeInfoCardProps> = ({
@@ -28,6 +30,7 @@ export const RecipeInfoCard: React.FC<RecipeInfoCardProps> = ({
 	cookTimeMinutes,
 	ingredients,
 	caloriesPerServing,
+	tags,
 }) => {
 	return (
 		<div className={s.infoGrid}>
@@ -39,7 +42,17 @@ export const RecipeInfoCard: React.FC<RecipeInfoCardProps> = ({
 			</div>
 
 			<div className={s.metaContent}>
-				<MealTypesList mealTypes={mealType} />
+				<div>
+					<CategoriesList
+						categories={mealType}
+						categoryType='meal-type'
+					/>
+					<CategoriesList
+						categories={tags}
+						categoryType='tag'
+					/>
+				</div>
+
 				<Rating value={rating} />
 
 				<div className={s.metaGroup}>

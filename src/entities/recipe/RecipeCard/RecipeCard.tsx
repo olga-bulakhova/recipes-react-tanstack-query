@@ -3,8 +3,9 @@ import s from './RecipeCard.module.css'
 import { IconLabel, Rating, Typography } from '@/shared/components'
 import { CaloriesIcon } from '@/shared/icons/CaloriesIcon'
 import { ClockIcon } from '@/shared/icons/ClockIcon'
-import { MealTypesList } from '../MealTypesList/MealTypesList'
+
 import { Link } from 'react-router-dom'
+import { CategoriesList } from '../CategoriesList'
 
 interface RecipeCardProps {
 	recipe: IRecipe
@@ -43,7 +44,16 @@ export const RecipeCard: React.FC<RecipeCardProps> = props => {
 
 				<div className={s.recipeCardFooter}>
 					<Rating value={recipe.rating} />
-					<MealTypesList mealTypes={recipe.mealType} />
+					<div>
+						<CategoriesList
+							categories={recipe.mealType}
+							categoryType='meal-type'
+						/>
+						{/* <CategoriesList
+							categories={recipe.tags}
+							categoryType='tag'
+						/> */}
+					</div>
 				</div>
 			</div>
 		</div>

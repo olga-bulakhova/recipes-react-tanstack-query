@@ -34,6 +34,7 @@ const RecipePage = () => {
 					cookTimeMinutes={recipe.cookTimeMinutes}
 					ingredients={recipe.ingredients}
 					caloriesPerServing={recipe.caloriesPerServing}
+					tags={recipe.tags}
 				/>
 
 				<RecipeInstructions instructions={recipe.instructions} />
