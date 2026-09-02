@@ -30,3 +30,5 @@ export interface IRecipeFilters {
 	sortBy?: string
 	order?: string
 }
+
+export type CategoryType = 'meal-type' | 'tag' | 'all'

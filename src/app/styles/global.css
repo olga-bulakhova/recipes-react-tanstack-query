@@ -31,6 +31,10 @@ body {
 	text-align: center;
 }
 
+.capitalize {
+	text-transform: capitalize;
+}
+
 .mb-5 {
 	margin-bottom: 5px;
 }

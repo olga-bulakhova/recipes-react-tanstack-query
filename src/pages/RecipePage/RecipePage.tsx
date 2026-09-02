@@ -4,10 +4,15 @@ import { RecipeHeader } from './components/RecipeHeader'
 import { RecipeInfoCard } from './components/RecipeInfoCard'
 import { RecipeInstructions } from './components/RecipeInstructions'
 import s from './RecipePage.module.css'
+import { Spinner } from '@/shared/components'
 
 const RecipePage = () => {
 	const { id } = useParams<{ id: string }>()
-	const { data: recipe } = useRecipeQuery(Number(id))
+	const { data: recipe, isLoading } = useRecipeQuery(Number(id))
+
+	if (isLoading) {
+		return <Spinner fullScreen={true} />
+	}
 
 	if (!recipe) {
 		return <div className='wrapper center'>Recipe not found</div>
